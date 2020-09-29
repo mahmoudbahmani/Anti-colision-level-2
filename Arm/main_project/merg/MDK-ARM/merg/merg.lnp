@@ -1,0 +1,32 @@
+--cpu Cortex-M4.fp
+"merg\main.o"
+"merg\stm32f4xx_it.o"
+"merg\stm32f4xx_hal_msp.o"
+"merg\startup_stm32f407xx.o"
+"merg\stm_my_lcd16x2.o"
+"merg\main.o"
+"merg\stm32f4xx_it.o"
+"merg\stm32f4xx_hal_msp.o"
+"merg\stm32f4xx_hal_adc.o"
+"merg\stm32f4xx_hal_adc_ex.o"
+"merg\stm32f4xx_hal_tim.o"
+"merg\stm32f4xx_hal_tim_ex.o"
+"merg\stm32f4xx_hal_rcc.o"
+"merg\stm32f4xx_hal_rcc_ex.o"
+"merg\stm32f4xx_hal_flash.o"
+"merg\stm32f4xx_hal_flash_ex.o"
+"merg\stm32f4xx_hal_flash_ramfunc.o"
+"merg\stm32f4xx_hal_gpio.o"
+"merg\stm32f4xx_hal_dma_ex.o"
+"merg\stm32f4xx_hal_dma.o"
+"merg\stm32f4xx_hal_pwr.o"
+"merg\stm32f4xx_hal_pwr_ex.o"
+"merg\stm32f4xx_hal_cortex.o"
+"merg\stm32f4xx_hal.o"
+"merg\stm32f4xx_hal_exti.o"
+"merg\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "merg\merg.sct"
+
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "merg.map" -o merg\merg.axf
